@@ -1,0 +1,77 @@
+openapi: 3.0.3
+info:
+  title: Science Exchange Providers addresses pricing_units API
+  version: v1
+  description: Read API for scientific-service providers (suppliers) on the Science Exchange R&D marketplace. Exposes a provider's RFQs, quotes, services, facilities, line items, ratings, tags, users and related resources. Derived from the first-party se_providers_api_client Ruby wrapper (github.com/scienceexchange/se_providers_api_client); authoritative reference at https://demo.scienceexchange.com/api-docs/providers.
+  contact:
+    name: Science Exchange Engineering
+    email: devs@scienceexchange.com
+    url: https://www.scienceexchange.com
+  license:
+    name: Proprietary
+  x-derived-from: https://github.com/scienceexchange/se_providers_api_client
+servers:
+- url: https://www.scienceexchange.com/api/providers/v1
+  description: Production
+security:
+- access_token: []
+tags:
+- name: pricing_units
+  description: PricingUnits resource.
+paths:
+  /pricing_units:
+    get:
+      operationId: getProvidersV1PricingUnits
+      summary: List pricing units
+      description: Returns the collection of pricing units visible to the authenticated provider.
+      tags:
+      - pricing_units
+      responses:
+        '200':
+          description: A list of pricing units.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /pricing_units/{id}:
+    get:
+      operationId: getProvidersV1PricingUnitsId
+      summary: Get a pricing unit
+      description: Returns a single pricing unit by its identifier.
+      tags:
+      - pricing_units
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The pricing unit identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested pricing unit.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Pricing unit not found.
+components:
+  securitySchemes:
+    access_token:
+      type: apiKey
+      in: query
+      name: access_token
+      description: Provider API key passed as the access_token query parameter on every request.
+x-apievangelist:
+  generated: '2026-07-21'
+  method: derived
+  source: https://github.com/scienceexchange/se_providers_api_client (DSL endpoint definitions)

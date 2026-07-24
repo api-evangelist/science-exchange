@@ -1,0 +1,77 @@
+openapi: 3.0.3
+info:
+  title: Science Exchange Providers addresses currency_codes API
+  version: v1
+  description: Read API for scientific-service providers (suppliers) on the Science Exchange R&D marketplace. Exposes a provider's RFQs, quotes, services, facilities, line items, ratings, tags, users and related resources. Derived from the first-party se_providers_api_client Ruby wrapper (github.com/scienceexchange/se_providers_api_client); authoritative reference at https://demo.scienceexchange.com/api-docs/providers.
+  contact:
+    name: Science Exchange Engineering
+    email: devs@scienceexchange.com
+    url: https://www.scienceexchange.com
+  license:
+    name: Proprietary
+  x-derived-from: https://github.com/scienceexchange/se_providers_api_client
+servers:
+- url: https://www.scienceexchange.com/api/providers/v1
+  description: Production
+security:
+- access_token: []
+tags:
+- name: currency_codes
+  description: CurrencyCodes resource.
+paths:
+  /currency_codes:
+    get:
+      operationId: getProvidersV1CurrencyCodes
+      summary: List currency codes
+      description: Returns the collection of currency codes visible to the authenticated provider.
+      tags:
+      - currency_codes
+      responses:
+        '200':
+          description: A list of currency codes.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /currency_codes/{id}:
+    get:
+      operationId: getProvidersV1CurrencyCodesId
+      summary: Get a currency code
+      description: Returns a single currency code by its identifier.
+      tags:
+      - currency_codes
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The currency code identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested currency code.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Currency code not found.
+components:
+  securitySchemes:
+    access_token:
+      type: apiKey
+      in: query
+      name: access_token
+      description: Provider API key passed as the access_token query parameter on every request.
+x-apievangelist:
+  generated: '2026-07-21'
+  method: derived
+  source: https://github.com/scienceexchange/se_providers_api_client (DSL endpoint definitions)
