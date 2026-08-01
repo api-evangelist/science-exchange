@@ -1,0 +1,36 @@
+# Science Exchange
+
+> Science Exchange is an R&D supplier orchestration and procurement platform for life-sciences organizations, running a marketplace of 3,800+ pre-qualified scientific service providers under a single master service agreement. It exposes a read-only Providers REST API (v1) that lets scientific-service suppliers pull their RFQs, quotes, services, facilities, line items, ratings, tags, and users.
+
+- Website: https://www.scienceexchange.com
+- Backed by: a16z, Index Ventures, Union Square Ventures
+- Founded: 2011 (Palo Alto, California)
+
+## APIs
+
+- [Science Exchange Providers API](https://demo.scienceexchange.com/api-docs/providers): Read-only REST API (v1) for scientific-service providers. Base URL https://www.scienceexchange.com/api/providers/v1 . Auth via access_token query parameter.
+
+## Specs
+
+- [OpenAPI (derived)](openapi/science-exchange-providers-openapi.yml): 45 GET operations across 23 resources (rfqs, quotes, services, facilities, line_items, ratings, users, and more).
+
+## Artifacts
+
+- [Authentication](authentication/science-exchange-authentication.yml): apiKey via access_token query parameter.
+- [Conventions](conventions/science-exchange-conventions.yml): auth, content-type, versioning, error handling.
+- [Error catalog](errors/science-exchange-problem-types.yml): 401 / 404 / generic client error.
+- [Data model](data-model/science-exchange-data-model.yml): 23 entities, 19 relationships.
+- [MCP tools (candidate)](mcp/science-exchange-mcp.yml): 45 candidate read tools.
+- [Lifecycle](lifecycle/science-exchange-lifecycle.yml): URI-path versioning (v1).
+- [Conformance](conformance/science-exchange-conformance.yml): SOC 2 Type II, ISO 9001, HIPAA, GDPR.
+- [Packages / SDK](packages/science-exchange-packages.yml): se_providers_api_client (Ruby, GitHub).
+
+## Docs
+
+- [Developer / API reference](https://demo.scienceexchange.com/api-docs/providers)
+- [GitHub organization](https://github.com/scienceexchange)
+- [Ruby client](https://github.com/scienceexchange/se_providers_api_client)
+- [Integrations](https://www.scienceexchange.com/platform/integrations)
+- [Security](https://www.scienceexchange.com/platform/security)
+- [Trust](https://www.scienceexchange.com/trust)
+- [Blog](https://www.scienceexchange.com/blog)

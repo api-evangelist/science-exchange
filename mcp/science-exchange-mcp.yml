@@ -1,0 +1,144 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: Derived from openapi/science-exchange-providers-openapi.yml operations. No official Science Exchange
+  MCP server was found.
+server:
+  name: science-exchange-providers
+  transport: stdio
+tools:
+- name: list_addresses
+  description: List addresses for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1Addresses
+- name: get_address
+  description: Get a single address by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1AddressesId
+- name: list_attachments
+  description: List attachments for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1Attachments
+- name: get_attachment
+  description: Get a single attachment by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1AttachmentsId
+- name: list_currency_codes
+  description: List currency codes for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1CurrencyCodes
+- name: get_currency_code
+  description: Get a single currency code by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1CurrencyCodesId
+- name: list_experiment_type_fields
+  description: List experiment type fields for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1ExperimentTypeFields
+- name: get_experiment_type_field
+  description: Get a single experiment type field by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1ExperimentTypeFieldsId
+- name: list_experiment_types
+  description: List experiment types for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1ExperimentTypes
+- name: get_experiment_type
+  description: Get a single experiment type by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1ExperimentTypesId
+- name: list_facilities
+  description: List facilities for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1Facilities
+- name: get_facility
+  description: Get a single facility by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1FacilitiesId
+- name: list_facility_members
+  description: List facility members for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1FacilityMembers
+- name: get_facility_member
+  description: Get a single facility member by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1FacilityMembersId
+- name: list_facility_photos
+  description: List facility photos for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1FacilityPhotos
+- name: get_facility_photo
+  description: Get a single facility photo by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1FacilityPhotosId
+- name: list_groups
+  description: List groups for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1Groups
+- name: get_group
+  description: Get a single group by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1GroupsId
+- name: list_line_items
+  description: List line items for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1LineItems
+- name: get_line_item
+  description: Get a single line item by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1LineItemsId
+- name: list_pricing_units
+  description: List pricing units for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1PricingUnits
+- name: get_pricing_unit
+  description: Get a single pricing unit by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1PricingUnitsId
+- name: list_quote_versions
+  description: List quote versions for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1QuoteVersions
+- name: get_quote_version
+  description: Get a single quote version by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1QuoteVersionsId
+- name: list_quotes
+  description: List quotes for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1Quotes
+- name: get_quote
+  description: Get a single quote by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1QuotesId
+- name: list_ratings
+  description: List ratings for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1Ratings
+- name: get_rating
+  description: Get a single rating by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1RatingsId
+- name: list_rfq_collaborators
+  description: List rfq collaborators for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1RFQCollaborators
+- name: get_rfq_collaborator
+  description: Get a single rfq collaborator by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1RFQCollaboratorsId
+- name: list_rfq_events
+  description: List rfq events for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1RFQEvents
+- name: list_rfq_fields
+  description: List rfq fields for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1RFQFields
+- name: get_rfq_field
+  description: Get a single rfq field by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1RFQFieldsId
+- name: list_rfq_messages
+  description: List rfq messages for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1RFQMessages
+- name: get_rfq_message
+  description: Get a single rfq message by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1RFQMessagesId
+- name: list_rfqs
+  description: List rfqs for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1RFQs
+- name: get_rfq
+  description: Get a single rfq by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1RFQsId
+- name: list_services
+  description: List services for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1Services
+- name: get_service
+  description: Get a single service by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1ServicesId
+- name: list_tag_contexts
+  description: List tag contexts for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1TagContexts
+- name: get_tag_context
+  description: Get a single tag context by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1TagContextsId
+- name: list_tags
+  description: List tags for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1Tags
+- name: get_tag
+  description: Get a single tag by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1TagsId
+- name: list_users
+  description: List users for the authenticated provider.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1Users
+- name: get_user
+  description: Get a single user by id.
+  source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1UsersId

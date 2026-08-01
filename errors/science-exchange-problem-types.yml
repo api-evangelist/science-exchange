@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: derived
+source: >-
+  Derived from se_providers_api_client (client.rb error handling) and the derived OpenAPI responses.
+  The Providers API does not publish an RFC 9457 problem+json catalog; these are the status classes
+  the first-party client explicitly handles.
+format: http-status
+api: openapi/science-exchange-providers-openapi.yml
+problems:
+- status: 401
+  title: Unauthorized
+  description: Missing or invalid access_token query parameter.
+  remediation: Supply a valid per-provider access_token on the request.
+- status: 404
+  title: Resource not found
+  description: >-
+    The requested resource does not exist or is not visible to the authenticated provider. The
+    client raises ResourceNotFoundError for this status.
+  client_error_class: SeProvidersApiClient::Errors::ResourceNotFoundError
+- status: 4xx/5xx
+  title: Client error
+  description: >-
+    Any non-2xx, non-404 response. The client raises a generic ClientError carrying the method, URL,
+    request headers, and the raw server response.
+  client_error_class: SeProvidersApiClient::Errors::ClientError

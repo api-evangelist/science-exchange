@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/scienceexchange/se_providers_api_client
+notes: >-
+  First-party Ruby client for the Science Exchange Providers API. Published on GitHub under the
+  scienceexchange org but NOT released to RubyGems as of this pass (rubygems.org returns "could not
+  be found"), so install is via git. No npm/PyPI/Maven/NuGet/Go/Packagist/crates first-party client
+  was found.
+packages:
+- language: ruby
+  registry: github
+  name: se_providers_api_client
+  url: https://github.com/scienceexchange/se_providers_api_client
+  install: "gem 'se_providers_api_client', git: 'https://github.com/scienceexchange/se_providers_api_client'"
+  official: true
+  version: 0.1.0
+  covers_api: openapi/science-exchange-providers-openapi.yml
+  published_to_registry: false

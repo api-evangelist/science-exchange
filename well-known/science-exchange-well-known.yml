@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+host: https://www.scienceexchange.com
+notes: >-
+  Probed the /.well-known/ discovery surface on the website and API hosts. No documents were served
+  (security.txt returned 404 on www; demo host returned 530 origin error). Absence is recorded data.
+documents:
+- path: /.well-known/security.txt
+  host: https://www.scienceexchange.com
+  status: 404
+- path: /.well-known/security.txt
+  host: https://demo.scienceexchange.com
+  status: 530
+- path: /.well-known/openid-configuration
+  host: https://www.scienceexchange.com
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  host: https://www.scienceexchange.com
+  status: 404
+- path: /.well-known/api-catalog
+  host: https://www.scienceexchange.com
+  status: 404
+- path: /.well-known/ai-plugin.json
+  host: https://www.scienceexchange.com
+  status: 404

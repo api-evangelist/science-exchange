@@ -1,0 +1,106 @@
+generated: '2026-07-21'
+method: derived
+source: Derived from the Providers API resource set (se_providers_api_client DSL). Relationships inferred
+  from resource naming; field names are conventional and not confirmed against a published schema.
+api: openapi/science-exchange-providers-openapi.yml
+entities:
+- addresses
+- attachments
+- currency_codes
+- experiment_type_fields
+- experiment_types
+- facilities
+- facility_members
+- facility_photos
+- groups
+- line_items
+- pricing_units
+- quote_versions
+- quotes
+- ratings
+- rfq_collaborators
+- rfq_events
+- rfq_fields
+- rfq_messages
+- rfqs
+- services
+- tag_contexts
+- tags
+- users
+relationships:
+- from: rfqs
+  to: quotes
+  kind: has_many
+  via: rfq_id
+- from: rfqs
+  to: line_items
+  kind: has_many
+  via: rfq_id
+- from: rfqs
+  to: rfq_collaborators
+  kind: has_many
+  via: rfq_id
+- from: rfqs
+  to: rfq_events
+  kind: has_many
+  via: rfq_id
+- from: rfqs
+  to: rfq_fields
+  kind: has_many
+  via: rfq_id
+- from: rfqs
+  to: rfq_messages
+  kind: has_many
+  via: rfq_id
+- from: quotes
+  to: quote_versions
+  kind: has_many
+  via: quote_id
+- from: quotes
+  to: rfqs
+  kind: belongs_to
+  via: rfq_id
+- from: line_items
+  to: quotes
+  kind: belongs_to
+  via: quote_id
+- from: line_items
+  to: pricing_units
+  kind: belongs_to
+  via: pricing_unit_id
+- from: facilities
+  to: facility_members
+  kind: has_many
+  via: facility_id
+- from: facilities
+  to: facility_photos
+  kind: has_many
+  via: facility_id
+- from: facilities
+  to: services
+  kind: has_many
+  via: facility_id
+- from: facilities
+  to: addresses
+  kind: has_many
+  via: facility_id
+- from: facility_members
+  to: users
+  kind: belongs_to
+  via: user_id
+- from: services
+  to: experiment_types
+  kind: belongs_to
+  via: experiment_type_id
+- from: experiment_types
+  to: experiment_type_fields
+  kind: has_many
+  via: experiment_type_id
+- from: ratings
+  to: facilities
+  kind: belongs_to
+  via: facility_id
+- from: tags
+  to: tag_contexts
+  kind: belongs_to
+  via: tag_context_id

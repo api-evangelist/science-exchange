@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: searched
+probe: true
+source: https://www.scienceexchange.com/trust
+url: https://www.scienceexchange.com/trust
+certifications:
+- SOC 2
+- HIPAA
+- GDPR
+evidence:
+- source: https://www.scienceexchange.com/trust
+  keywords:
+  - soc 2
+  - soc2
+  - hipaa
+  - gdpr

@@ -1,0 +1,15 @@
+generated: '2026-07-21'
+method: generated
+source: >-
+  Grounded in openapi/science-exchange-providers-openapi.yml (operationIds verified against the
+  first-party se_providers_api_client DSL). No provider-published skills/AGENTS.md were found.
+api: openapi/science-exchange-providers-openapi.yml
+skills:
+- file: science-exchange-review-rfqs-and-quotes.md
+  name: Review incoming RFQs and their quotes
+  api: openapi/science-exchange-providers-openapi.yml
+  operations: [getProvidersV1RFQs, getProvidersV1RFQsId, getProvidersV1Quotes, getProvidersV1QuotesId, getProvidersV1LineItems]
+- file: science-exchange-manage-facility-catalog.md
+  name: Audit a provider's facilities, services, and ratings
+  api: openapi/science-exchange-providers-openapi.yml
+  operations: [getProvidersV1Facilities, getProvidersV1FacilitiesId, getProvidersV1Services, getProvidersV1ServicesId, getProvidersV1Ratings]

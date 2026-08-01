@@ -1,0 +1,23 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Science Exchange Providers API
+  version: 1.0.0
+extends: openapi/science-exchange-providers-openapi.yml
+x-apievangelist:
+  generated: '2026-07-21'
+  method: generated
+  source: API Evangelist enrichment pipeline
+actions:
+- target: $.info
+  update:
+    x-apievangelist-rating: 3
+    x-apievangelist-notes: >-
+      Read-only Providers API derived from the first-party se_providers_api_client Ruby wrapper.
+      Authoritative reference at https://demo.scienceexchange.com/api-docs/providers.
+    x-authentication: authentication/science-exchange-authentication.yml
+    x-conventions: conventions/science-exchange-conventions.yml
+    x-data-model: data-model/science-exchange-data-model.yml
+- target: $.info
+  update:
+    x-lifecycle: lifecycle/science-exchange-lifecycle.yml
+    x-error-catalog: errors/science-exchange-problem-types.yml

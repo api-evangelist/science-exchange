@@ -1,8 +1,14 @@
 aid: science-exchange
 name: Science Exchange
-description: Science Exchange is a company surfaced as a portfolio company of a16z, index-ventures, union-square-ventures
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  Science Exchange is an R&D supplier orchestration and procurement platform for life-sciences
+  organizations. It runs a marketplace of 3,800+ pre-qualified scientific service providers under a
+  single master service agreement, and streamlines supplier sourcing, onboarding, contracting,
+  compliance, and payment. The platform integrates with ERP (SAP, Oracle, Workday), P2P (Ariba,
+  Coupa), and SSO/SAML identity systems, and exposes a read-only Providers REST API (v1) that lets
+  scientific-service suppliers pull their RFQs, quotes, services, facilities, line items, ratings,
+  tags, and users. Founded in 2011 and headquartered in Palo Alto, California; backed by a16z,
+  Index Ventures, and Union Square Ventures.
 url: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,17 +18,508 @@ x-backed-by:
 - union-square-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 17
+  pass: local-v1
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://avatars.githubusercontent.com/scienceexchange
 tags:
 - Company
-apis: []
+- Life Sciences
+- Research and Development
+- Scientific Services
+- Procurement
+- Marketplace
+- Supplier Management
+- Biotech
+- Pharmaceuticals
+- API
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: science-exchange:science-exchange-addresses-api
+  name: Science Exchange addresses API
+  description: Addresses resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - addresses
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-addresses-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-attachments-api
+  name: Science Exchange attachments API
+  description: Attachments resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - attachments
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-attachments-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-currency-codes-api
+  name: Science Exchange currency_codes API
+  description: CurrencyCodes resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - currency_codes
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-currency-codes-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-experiment-type-fields-api
+  name: Science Exchange experiment_type_fields API
+  description: ExperimentTypeFields resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - experiment_type_fields
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-experiment-type-fields-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-experiment-types-api
+  name: Science Exchange experiment_types API
+  description: ExperimentTypes resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - experiment_types
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-experiment-types-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-facilities-api
+  name: Science Exchange facilities API
+  description: Facilities resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - facilities
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-facilities-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-facility-members-api
+  name: Science Exchange facility_members API
+  description: FacilityMembers resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - facility_members
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-facility-members-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-facility-photos-api
+  name: Science Exchange facility_photos API
+  description: FacilityPhotos resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - facility_photos
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-facility-photos-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-groups-api
+  name: Science Exchange groups API
+  description: Groups resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - groups
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-groups-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-line-items-api
+  name: Science Exchange line_items API
+  description: LineItems resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - line_items
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-line-items-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-pricing-units-api
+  name: Science Exchange pricing_units API
+  description: PricingUnits resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - pricing_units
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-pricing-units-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-quote-versions-api
+  name: Science Exchange quote_versions API
+  description: QuoteVersions resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - quote_versions
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-quote-versions-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-quotes-api
+  name: Science Exchange quotes API
+  description: Quotes resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - quotes
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-quotes-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-ratings-api
+  name: Science Exchange ratings API
+  description: Ratings resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - ratings
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-ratings-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-rfq-collaborators-api
+  name: Science Exchange rfq_collaborators API
+  description: RFQCollaborators resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - rfq_collaborators
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-rfq-collaborators-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-rfq-events-api
+  name: Science Exchange rfq_events API
+  description: RFQEvents resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - rfq_events
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-rfq-events-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-rfq-fields-api
+  name: Science Exchange rfq_fields API
+  description: RFQFields resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - rfq_fields
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-rfq-fields-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-rfq-messages-api
+  name: Science Exchange rfq_messages API
+  description: RFQMessages resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - rfq_messages
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-rfq-messages-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-rfqs-api
+  name: Science Exchange rfqs API
+  description: RFQs resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - rfqs
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-rfqs-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-services-api
+  name: Science Exchange services API
+  description: Services resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - services
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-services-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-tag-contexts-api
+  name: Science Exchange tag_contexts API
+  description: TagContexts resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - tag_contexts
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-tag-contexts-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-tags-api
+  name: Science Exchange tags API
+  description: Tags resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - tags
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-tags-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-users-api
+  name: Science Exchange users API
+  description: Users resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - users
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-users-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
 common:
+- type: TrustCenter
+  url: security/science-exchange-trust-center.yml
 - type: Website
-  url: http://scienceexchange.com
+  url: https://www.scienceexchange.com
+- type: DeveloperPortal
+  url: https://demo.scienceexchange.com/api-docs/providers
+- type: Documentation
+  url: https://demo.scienceexchange.com/api-docs/providers
+- type: APIReference
+  url: https://demo.scienceexchange.com/api-docs/providers
+- type: GitHubOrganization
+  url: https://github.com/scienceexchange
+- type: Blog
+  url: https://www.scienceexchange.com/blog
+- type: SignUp
+  url: https://www.scienceexchange.com/login
+- type: TermsOfService
+  url: https://www.scienceexchange.com/terms
+- type: PrivacyPolicy
+  url: https://www.scienceexchange.com/privacy-policy
+- type: TrustCenter
+  url: https://www.scienceexchange.com/trust
+- type: Compliance
+  url: https://www.scienceexchange.com/platform/security
+- type: Trust
+  url: https://www.scienceexchange.com/trust
+- type: Packages
+  url: packages/science-exchange-packages.yml
+- type: SDKs
+  url: packages/science-exchange-packages.yml
+- type: Authentication
+  url: authentication/science-exchange-authentication.yml
+- type: Conventions
+  url: conventions/science-exchange-conventions.yml
+- type: ErrorCatalog
+  url: errors/science-exchange-problem-types.yml
+- type: DataModel
+  url: data-model/science-exchange-data-model.yml
+- type: MCPServer
+  url: mcp/science-exchange-mcp.yml
+- type: LLMsTxt
+  url: llms/science-exchange-llms.txt
+- type: WellKnown
+  url: well-known/science-exchange-well-known.yml
+- type: Conformance
+  url: conformance/science-exchange-conformance.yml
+- type: Lifecycle
+  url: lifecycle/science-exchange-lifecycle.yml
+- type: DomainSecurity
+  url: security/science-exchange-domain-security.yml
+- type: AgentSkill
+  url: skills/_index.yml

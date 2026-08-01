@@ -1,0 +1,20 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://www.scienceexchange.com/platform/integrations and the derived OpenAPI / first-party client.
+api: openapi/science-exchange-providers-openapi.yml
+versioning:
+  scheme: uri-path
+  current: v1
+  base_path: /api/providers/v1
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+notes: >-
+  No public status page, deprecation policy, or published SLA was found for the Providers API.
+  Versioning is by URI path (v1). No deprecated operations detected in the derived spec.
+deprecated_operations: []

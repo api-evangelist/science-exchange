@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://www.scienceexchange.com/platform/security and https://www.scienceexchange.com/trust
+api: openapi/science-exchange-providers-openapi.yml
+standards:
+- id: soc2-type2
+  conforms: true
+  evidence: SSAE SOC 2 Type II certified (security/trust pages)
+- id: iso-9001
+  conforms: true
+  evidence: ISO 9001 Quality Management System certification (trust page)
+- id: hipaa
+  conforms: true
+  evidence: HIPAA compliant; "first R&D services platform to achieve HIPAA compliance"
+- id: gdpr
+  conforms: true
+  evidence: GDPR compliant (security page)
+- id: iso-27001
+  conforms: false
+- id: pci-dss
+  conforms: false
+- id: oauth2
+  conforms: false
+  evidence: API uses apiKey (access_token query param), not OAuth2
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no application/problem+json envelope documented
+- id: tls-1.2-plus
+  conforms: true
+  evidence: encryption in transit TLS 1.2+ (security page); live probe observed TLSv1.3

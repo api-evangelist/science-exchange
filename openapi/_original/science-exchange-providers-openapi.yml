@@ -1,0 +1,1089 @@
+openapi: 3.0.3
+info:
+  title: Science Exchange Providers API
+  version: v1
+  description: Read API for scientific-service providers (suppliers) on the Science Exchange R&D marketplace.
+    Exposes a provider's RFQs, quotes, services, facilities, line items, ratings, tags, users and related
+    resources. Derived from the first-party se_providers_api_client Ruby wrapper (github.com/scienceexchange/se_providers_api_client);
+    authoritative reference at https://demo.scienceexchange.com/api-docs/providers.
+  contact:
+    name: Science Exchange Engineering
+    email: devs@scienceexchange.com
+    url: https://www.scienceexchange.com
+  license:
+    name: Proprietary
+  x-derived-from: https://github.com/scienceexchange/se_providers_api_client
+servers:
+- url: https://www.scienceexchange.com/api/providers/v1
+  description: Production
+security:
+- access_token: []
+tags:
+- name: addresses
+  description: Addresses resource.
+- name: attachments
+  description: Attachments resource.
+- name: currency_codes
+  description: CurrencyCodes resource.
+- name: experiment_type_fields
+  description: ExperimentTypeFields resource.
+- name: experiment_types
+  description: ExperimentTypes resource.
+- name: facilities
+  description: Facilities resource.
+- name: facility_members
+  description: FacilityMembers resource.
+- name: facility_photos
+  description: FacilityPhotos resource.
+- name: groups
+  description: Groups resource.
+- name: line_items
+  description: LineItems resource.
+- name: pricing_units
+  description: PricingUnits resource.
+- name: quote_versions
+  description: QuoteVersions resource.
+- name: quotes
+  description: Quotes resource.
+- name: ratings
+  description: Ratings resource.
+- name: rfq_collaborators
+  description: RFQCollaborators resource.
+- name: rfq_events
+  description: RFQEvents resource.
+- name: rfq_fields
+  description: RFQFields resource.
+- name: rfq_messages
+  description: RFQMessages resource.
+- name: rfqs
+  description: RFQs resource.
+- name: services
+  description: Services resource.
+- name: tag_contexts
+  description: TagContexts resource.
+- name: tags
+  description: Tags resource.
+- name: users
+  description: Users resource.
+paths:
+  /addresses:
+    get:
+      operationId: getProvidersV1Addresses
+      summary: List addresses
+      description: Returns the collection of addresses visible to the authenticated provider.
+      tags:
+      - addresses
+      responses:
+        '200':
+          description: A list of addresses.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /addresses/{id}:
+    get:
+      operationId: getProvidersV1AddressesId
+      summary: Get a address
+      description: Returns a single address by its identifier.
+      tags:
+      - addresses
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The address identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested address.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Address not found.
+  /attachments:
+    get:
+      operationId: getProvidersV1Attachments
+      summary: List attachments
+      description: Returns the collection of attachments visible to the authenticated provider.
+      tags:
+      - attachments
+      responses:
+        '200':
+          description: A list of attachments.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /attachments/{id}:
+    get:
+      operationId: getProvidersV1AttachmentsId
+      summary: Get a attachment
+      description: Returns a single attachment by its identifier.
+      tags:
+      - attachments
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The attachment identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested attachment.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Attachment not found.
+  /currency_codes:
+    get:
+      operationId: getProvidersV1CurrencyCodes
+      summary: List currency codes
+      description: Returns the collection of currency codes visible to the authenticated provider.
+      tags:
+      - currency_codes
+      responses:
+        '200':
+          description: A list of currency codes.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /currency_codes/{id}:
+    get:
+      operationId: getProvidersV1CurrencyCodesId
+      summary: Get a currency code
+      description: Returns a single currency code by its identifier.
+      tags:
+      - currency_codes
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The currency code identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested currency code.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Currency code not found.
+  /experiment_type_fields:
+    get:
+      operationId: getProvidersV1ExperimentTypeFields
+      summary: List experiment type fields
+      description: Returns the collection of experiment type fields visible to the authenticated provider.
+      tags:
+      - experiment_type_fields
+      responses:
+        '200':
+          description: A list of experiment type fields.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /experiment_type_fields/{id}:
+    get:
+      operationId: getProvidersV1ExperimentTypeFieldsId
+      summary: Get a experiment type field
+      description: Returns a single experiment type field by its identifier.
+      tags:
+      - experiment_type_fields
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The experiment type field identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested experiment type field.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Experiment type field not found.
+  /experiment_types:
+    get:
+      operationId: getProvidersV1ExperimentTypes
+      summary: List experiment types
+      description: Returns the collection of experiment types visible to the authenticated provider.
+      tags:
+      - experiment_types
+      responses:
+        '200':
+          description: A list of experiment types.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /experiment_types/{id}:
+    get:
+      operationId: getProvidersV1ExperimentTypesId
+      summary: Get a experiment type
+      description: Returns a single experiment type by its identifier.
+      tags:
+      - experiment_types
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The experiment type identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested experiment type.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Experiment type not found.
+  /facilities:
+    get:
+      operationId: getProvidersV1Facilities
+      summary: List facilities
+      description: Returns the collection of facilities visible to the authenticated provider.
+      tags:
+      - facilities
+      responses:
+        '200':
+          description: A list of facilities.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /facilities/{id}:
+    get:
+      operationId: getProvidersV1FacilitiesId
+      summary: Get a facility
+      description: Returns a single facility by its identifier.
+      tags:
+      - facilities
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The facility identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested facility.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Facility not found.
+  /facility_members:
+    get:
+      operationId: getProvidersV1FacilityMembers
+      summary: List facility members
+      description: Returns the collection of facility members visible to the authenticated provider.
+      tags:
+      - facility_members
+      responses:
+        '200':
+          description: A list of facility members.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /facility_members/{id}:
+    get:
+      operationId: getProvidersV1FacilityMembersId
+      summary: Get a facility member
+      description: Returns a single facility member by its identifier.
+      tags:
+      - facility_members
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The facility member identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested facility member.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Facility member not found.
+  /facility_photos:
+    get:
+      operationId: getProvidersV1FacilityPhotos
+      summary: List facility photos
+      description: Returns the collection of facility photos visible to the authenticated provider.
+      tags:
+      - facility_photos
+      responses:
+        '200':
+          description: A list of facility photos.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /facility_photos/{id}:
+    get:
+      operationId: getProvidersV1FacilityPhotosId
+      summary: Get a facility photo
+      description: Returns a single facility photo by its identifier.
+      tags:
+      - facility_photos
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The facility photo identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested facility photo.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Facility photo not found.
+  /groups:
+    get:
+      operationId: getProvidersV1Groups
+      summary: List groups
+      description: Returns the collection of groups visible to the authenticated provider.
+      tags:
+      - groups
+      responses:
+        '200':
+          description: A list of groups.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /groups/{id}:
+    get:
+      operationId: getProvidersV1GroupsId
+      summary: Get a group
+      description: Returns a single group by its identifier.
+      tags:
+      - groups
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The group identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested group.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Group not found.
+  /line_items:
+    get:
+      operationId: getProvidersV1LineItems
+      summary: List line items
+      description: Returns the collection of line items visible to the authenticated provider.
+      tags:
+      - line_items
+      responses:
+        '200':
+          description: A list of line items.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /line_items/{id}:
+    get:
+      operationId: getProvidersV1LineItemsId
+      summary: Get a line item
+      description: Returns a single line item by its identifier.
+      tags:
+      - line_items
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The line item identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested line item.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Line item not found.
+  /pricing_units:
+    get:
+      operationId: getProvidersV1PricingUnits
+      summary: List pricing units
+      description: Returns the collection of pricing units visible to the authenticated provider.
+      tags:
+      - pricing_units
+      responses:
+        '200':
+          description: A list of pricing units.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /pricing_units/{id}:
+    get:
+      operationId: getProvidersV1PricingUnitsId
+      summary: Get a pricing unit
+      description: Returns a single pricing unit by its identifier.
+      tags:
+      - pricing_units
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The pricing unit identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested pricing unit.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Pricing unit not found.
+  /quote_versions:
+    get:
+      operationId: getProvidersV1QuoteVersions
+      summary: List quote versions
+      description: Returns the collection of quote versions visible to the authenticated provider.
+      tags:
+      - quote_versions
+      responses:
+        '200':
+          description: A list of quote versions.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /quote_versions/{id}:
+    get:
+      operationId: getProvidersV1QuoteVersionsId
+      summary: Get a quote version
+      description: Returns a single quote version by its identifier.
+      tags:
+      - quote_versions
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The quote version identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested quote version.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Quote version not found.
+  /quotes:
+    get:
+      operationId: getProvidersV1Quotes
+      summary: List quotes
+      description: Returns the collection of quotes visible to the authenticated provider.
+      tags:
+      - quotes
+      responses:
+        '200':
+          description: A list of quotes.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /quotes/{id}:
+    get:
+      operationId: getProvidersV1QuotesId
+      summary: Get a quote
+      description: Returns a single quote by its identifier.
+      tags:
+      - quotes
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The quote identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested quote.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Quote not found.
+  /ratings:
+    get:
+      operationId: getProvidersV1Ratings
+      summary: List ratings
+      description: Returns the collection of ratings visible to the authenticated provider.
+      tags:
+      - ratings
+      responses:
+        '200':
+          description: A list of ratings.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /ratings/{id}:
+    get:
+      operationId: getProvidersV1RatingsId
+      summary: Get a rating
+      description: Returns a single rating by its identifier.
+      tags:
+      - ratings
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The rating identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested rating.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Rating not found.
+  /rfq_collaborators:
+    get:
+      operationId: getProvidersV1RFQCollaborators
+      summary: List rfq collaborators
+      description: Returns the collection of rfq collaborators visible to the authenticated provider.
+      tags:
+      - rfq_collaborators
+      responses:
+        '200':
+          description: A list of rfq collaborators.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /rfq_collaborators/{id}:
+    get:
+      operationId: getProvidersV1RFQCollaboratorsId
+      summary: Get a RFQ collaborator
+      description: Returns a single RFQ collaborator by its identifier.
+      tags:
+      - rfq_collaborators
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The RFQ collaborator identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested RFQ collaborator.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Rfq collaborator not found.
+  /rfq_events:
+    get:
+      operationId: getProvidersV1RFQEvents
+      summary: List rfq events
+      description: Returns the collection of rfq events visible to the authenticated provider.
+      tags:
+      - rfq_events
+      responses:
+        '200':
+          description: A list of rfq events.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /rfq_fields:
+    get:
+      operationId: getProvidersV1RFQFields
+      summary: List rfq fields
+      description: Returns the collection of rfq fields visible to the authenticated provider.
+      tags:
+      - rfq_fields
+      responses:
+        '200':
+          description: A list of rfq fields.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /rfq_fields/{id}:
+    get:
+      operationId: getProvidersV1RFQFieldsId
+      summary: Get a RFQ field
+      description: Returns a single RFQ field by its identifier.
+      tags:
+      - rfq_fields
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The RFQ field identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested RFQ field.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Rfq field not found.
+  /rfq_messages:
+    get:
+      operationId: getProvidersV1RFQMessages
+      summary: List rfq messages
+      description: Returns the collection of rfq messages visible to the authenticated provider.
+      tags:
+      - rfq_messages
+      responses:
+        '200':
+          description: A list of rfq messages.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /rfq_messages/{id}:
+    get:
+      operationId: getProvidersV1RFQMessagesId
+      summary: Get a RFQ message
+      description: Returns a single RFQ message by its identifier.
+      tags:
+      - rfq_messages
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The RFQ message identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested RFQ message.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Rfq message not found.
+  /rfqs:
+    get:
+      operationId: getProvidersV1RFQs
+      summary: List rfqs
+      description: Returns the collection of rfqs visible to the authenticated provider.
+      tags:
+      - rfqs
+      responses:
+        '200':
+          description: A list of rfqs.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /rfqs/{id}:
+    get:
+      operationId: getProvidersV1RFQsId
+      summary: Get a RFQ
+      description: Returns a single RFQ by its identifier.
+      tags:
+      - rfqs
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The RFQ identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested RFQ.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Rfq not found.
+  /services:
+    get:
+      operationId: getProvidersV1Services
+      summary: List services
+      description: Returns the collection of services visible to the authenticated provider.
+      tags:
+      - services
+      responses:
+        '200':
+          description: A list of services.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /services/{id}:
+    get:
+      operationId: getProvidersV1ServicesId
+      summary: Get a service
+      description: Returns a single service by its identifier.
+      tags:
+      - services
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The service identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested service.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Service not found.
+  /tag_contexts:
+    get:
+      operationId: getProvidersV1TagContexts
+      summary: List tag contexts
+      description: Returns the collection of tag contexts visible to the authenticated provider.
+      tags:
+      - tag_contexts
+      responses:
+        '200':
+          description: A list of tag contexts.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /tag_contexts/{id}:
+    get:
+      operationId: getProvidersV1TagContextsId
+      summary: Get a tag context
+      description: Returns a single tag context by its identifier.
+      tags:
+      - tag_contexts
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The tag context identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested tag context.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Tag context not found.
+  /tags:
+    get:
+      operationId: getProvidersV1Tags
+      summary: List tags
+      description: Returns the collection of tags visible to the authenticated provider.
+      tags:
+      - tags
+      responses:
+        '200':
+          description: A list of tags.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /tags/{id}:
+    get:
+      operationId: getProvidersV1TagsId
+      summary: Get a tag
+      description: Returns a single tag by its identifier.
+      tags:
+      - tags
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The tag identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested tag.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Tag not found.
+  /users:
+    get:
+      operationId: getProvidersV1Users
+      summary: List users
+      description: Returns the collection of users visible to the authenticated provider.
+      tags:
+      - users
+      responses:
+        '200':
+          description: A list of users.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: Resource not found.
+  /users/{id}:
+    get:
+      operationId: getProvidersV1UsersId
+      summary: Get a user
+      description: Returns a single user by its identifier.
+      tags:
+      - users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The user identifier.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The requested user.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Missing or invalid access_token.
+        '404':
+          description: User not found.
+components:
+  securitySchemes:
+    access_token:
+      type: apiKey
+      in: query
+      name: access_token
+      description: Provider API key passed as the access_token query parameter on every request.
+x-apievangelist:
+  generated: '2026-07-21'
+  method: derived
+  source: https://github.com/scienceexchange/se_providers_api_client (DSL endpoint definitions)

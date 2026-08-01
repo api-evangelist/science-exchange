@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/science-exchange-providers-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - query
+schemes:
+- name: access_token
+  type: apiKey
+  in: query
+  parameter: access_token
+  description: Provider API key passed as the access_token query parameter on every request.
+  sources:
+  - openapi/science-exchange-providers-openapi.yml

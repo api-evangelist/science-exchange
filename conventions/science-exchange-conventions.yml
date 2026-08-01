@@ -1,0 +1,41 @@
+generated: '2026-07-21'
+method: derived
+source: >-
+  Derived from the first-party se_providers_api_client Ruby wrapper
+  (github.com/scienceexchange/se_providers_api_client) and the derived OpenAPI.
+api: openapi/science-exchange-providers-openapi.yml
+authentication:
+  style: api-key
+  location: query
+  parameter: access_token
+  notes: Every request carries the provider API key as the access_token query parameter.
+  detail: authentication/science-exchange-authentication.yml
+content_type:
+  request: application/json
+  response: application/json
+  accept: application/json
+idempotency:
+  supported: false
+  notes: >-
+    The Providers API v1 is read-only (only GET list and GET by-id operations are exposed by the
+    client). GET requests are naturally idempotent per HTTP semantics; there is no documented
+    idempotency-key header because there are no write operations.
+pagination:
+  documented: false
+  notes: >-
+    The client returns collections as JSON arrays (Resources::X.parse) with no pagination params
+    visible in the wrapper; a cursor/offset scheme may exist server-side but is not documented in
+    the public client.
+versioning:
+  scheme: uri-path
+  current: v1
+  base_path: /api/providers/v1
+  detail: lifecycle/science-exchange-lifecycle.yml
+error_envelope:
+  format: non-standard
+  notes: >-
+    The client raises ResourceNotFoundError on HTTP 404 and a generic ClientError on any other
+    non-2xx status; the raw error body shape is not documented publicly.
+  detail: errors/science-exchange-problem-types.yml
+rate_limiting:
+  documented: false
