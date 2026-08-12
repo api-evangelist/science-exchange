@@ -471,6 +471,8 @@ apis:
   - type: DataModel
     url: data-model/science-exchange-data-model.yml
 common:
+- type: Overlay
+  url: overlays/science-exchange-providers-overlay.yaml
 - type: TrustCenter
   url: security/science-exchange-trust-center.yml
 - type: Website
