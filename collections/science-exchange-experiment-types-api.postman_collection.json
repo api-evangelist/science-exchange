@@ -1,0 +1,371 @@
+{
+  "item": [
+    {
+      "id": "5e0a93d6-371d-42d1-8bfb-b57d48aa7e93",
+      "name": "experiment_types",
+      "description": {
+        "content": "ExperimentTypes resource.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "83492f85-1d09-46f9-932d-15dd1c293ba7",
+          "name": "List experiment types",
+          "request": {
+            "name": "List experiment types",
+            "description": {
+              "content": "Returns the collection of experiment types visible to the authenticated provider.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "experiment_types"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6681a14d-632b-4faf-aa04-6f14c97b9175",
+              "name": "A list of experiment types.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "experiment_types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0c784cd7-5428-48d8-b09b-bcdcb0bd92f6",
+              "name": "Missing or invalid access_token.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "experiment_types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b9becc89-3ad3-4e09-9a80-b5b43a0ab9d9",
+              "name": "Resource not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "experiment_types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5eb2380d-1581-4228-b3ef-a71bc8d83591",
+          "name": "Get a experiment type",
+          "request": {
+            "name": "Get a experiment type",
+            "description": {
+              "content": "Returns a single experiment type by its identifier.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "experiment_types",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) The experiment type identifier."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "27327bed-43e4-4fab-b304-1bdafac83c04",
+              "name": "The requested experiment type.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "experiment_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) The experiment type identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b8c85ecb-c2b4-4858-9b55-8225e6e7d64b",
+              "name": "Missing or invalid access_token.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "experiment_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) The experiment type identifier."
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "237e4d38-d5d5-4277-86b3-ad6d0d252043",
+              "name": "Experiment type not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "experiment_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) The experiment type identifier."
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.scienceexchange.com/api/providers/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "access_token"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "b9a7b831-6b40-469c-a9ed-096a999614a0",
+    "name": "Science Exchange Providers addresses experiment_types API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Read API for scientific-service providers (suppliers) on the Science Exchange R&D marketplace. Exposes a provider's RFQs, quotes, services, facilities, line items, ratings, tags, users and related resources. Derived from the first-party se_providers_api_client Ruby wrapper (github.com/scienceexchange/se_providers_api_client); authoritative reference at https://demo.scienceexchange.com/api-docs/providers.\n\nContact Support:\n Name: Science Exchange Engineering\n Email: devs@scienceexchange.com",
+      "type": "text/plain"
+    }
+  }
+}

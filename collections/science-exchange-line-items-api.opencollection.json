@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Science Exchange Providers addresses line_items API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_token",
+      "value": "{{access_token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "line_items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List line items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/line_items"
+          },
+          "docs": "Returns the collection of line items visible to the authenticated provider."
+        },
+        {
+          "info": {
+            "name": "Get a line item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/line_items/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The line item identifier."
+              }
+            ]
+          },
+          "docs": "Returns a single line item by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

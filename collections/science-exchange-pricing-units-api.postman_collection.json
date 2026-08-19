@@ -1,0 +1,371 @@
+{
+  "item": [
+    {
+      "id": "7900e5c1-dd2c-4f78-88cd-0190bcbfd48c",
+      "name": "pricing_units",
+      "description": {
+        "content": "PricingUnits resource.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c8fc69a6-a8da-4d0a-bbb3-8fd3ffb9f9d1",
+          "name": "List pricing units",
+          "request": {
+            "name": "List pricing units",
+            "description": {
+              "content": "Returns the collection of pricing units visible to the authenticated provider.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "pricing_units"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "40964bea-9a92-4767-980f-8fcbb3108938",
+              "name": "A list of pricing units.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pricing_units"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "aea6e045-0f5b-43ae-b582-cb02a9366fd0",
+              "name": "Missing or invalid access_token.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pricing_units"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "96c5dad2-87b6-476c-b8cf-15905391a23a",
+              "name": "Resource not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pricing_units"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "49ba79db-612d-4e18-b0ac-117f3fd47753",
+          "name": "Get a pricing unit",
+          "request": {
+            "name": "Get a pricing unit",
+            "description": {
+              "content": "Returns a single pricing unit by its identifier.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "pricing_units",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) The pricing unit identifier."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bfb2ecd2-69aa-4792-9a8a-64a08bac2b73",
+              "name": "The requested pricing unit.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pricing_units",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) The pricing unit identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "021bf849-87a7-44f0-bf76-da66f21e9356",
+              "name": "Missing or invalid access_token.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pricing_units",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) The pricing unit identifier."
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "da2c1731-b6c2-48fb-b10a-f674cf15d9d1",
+              "name": "Pricing unit not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pricing_units",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) The pricing unit identifier."
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.scienceexchange.com/api/providers/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "access_token"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "90febb43-7c5c-4336-8692-ab14d03d77b2",
+    "name": "Science Exchange Providers addresses pricing_units API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Read API for scientific-service providers (suppliers) on the Science Exchange R&D marketplace. Exposes a provider's RFQs, quotes, services, facilities, line items, ratings, tags, users and related resources. Derived from the first-party se_providers_api_client Ruby wrapper (github.com/scienceexchange/se_providers_api_client); authoritative reference at https://demo.scienceexchange.com/api-docs/providers.\n\nContact Support:\n Name: Science Exchange Engineering\n Email: devs@scienceexchange.com",
+      "type": "text/plain"
+    }
+  }
+}

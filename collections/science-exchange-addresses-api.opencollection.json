@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Science Exchange Providers addresses API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_token",
+      "value": "{{access_token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "addresses",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List addresses",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/addresses"
+          },
+          "docs": "Returns the collection of addresses visible to the authenticated provider."
+        },
+        {
+          "info": {
+            "name": "Get a address",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/addresses/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The address identifier."
+              }
+            ]
+          },
+          "docs": "Returns a single address by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

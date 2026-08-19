@@ -1,0 +1,371 @@
+{
+  "item": [
+    {
+      "id": "114172e8-4716-4d0a-9513-7661d35f5001",
+      "name": "rfq_fields",
+      "description": {
+        "content": "RFQFields resource.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ba36cdc0-4f29-43b5-8f51-55c769a194fe",
+          "name": "List rfq fields",
+          "request": {
+            "name": "List rfq fields",
+            "description": {
+              "content": "Returns the collection of rfq fields visible to the authenticated provider.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "rfq_fields"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "095bfb79-a61d-478e-a347-b27fbb9d3648",
+              "name": "A list of rfq fields.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rfq_fields"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b752693e-9acf-41fc-aea3-84bb4db9234b",
+              "name": "Missing or invalid access_token.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rfq_fields"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "74295bc7-795d-4469-9156-ff659b3702cb",
+              "name": "Resource not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rfq_fields"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a02f7d8c-5257-4938-9f62-8015fdd08761",
+          "name": "Get a RFQ field",
+          "request": {
+            "name": "Get a RFQ field",
+            "description": {
+              "content": "Returns a single RFQ field by its identifier.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "rfq_fields",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) The RFQ field identifier."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a45370aa-ccce-454c-a05f-6a7bedf07d3e",
+              "name": "The requested RFQ field.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rfq_fields",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) The RFQ field identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ab21fc9e-2af5-4d29-84d3-01e2b2179d2c",
+              "name": "Missing or invalid access_token.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rfq_fields",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) The RFQ field identifier."
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f98fd5d9-9851-45c3-9489-1c716ed59b84",
+              "name": "Rfq field not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rfq_fields",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) The RFQ field identifier."
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.scienceexchange.com/api/providers/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "access_token"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "55e4a622-fdbd-43d2-a0ca-ad009366a39b",
+    "name": "Science Exchange Providers addresses rfq_fields API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Read API for scientific-service providers (suppliers) on the Science Exchange R&D marketplace. Exposes a provider's RFQs, quotes, services, facilities, line items, ratings, tags, users and related resources. Derived from the first-party se_providers_api_client Ruby wrapper (github.com/scienceexchange/se_providers_api_client); authoritative reference at https://demo.scienceexchange.com/api-docs/providers.\n\nContact Support:\n Name: Science Exchange Engineering\n Email: devs@scienceexchange.com",
+      "type": "text/plain"
+    }
+  }
+}

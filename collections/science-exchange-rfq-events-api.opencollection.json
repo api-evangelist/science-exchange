@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Science Exchange Providers addresses rfq_events API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_token",
+      "value": "{{access_token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "rfq_events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List rfq events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/rfq_events"
+          },
+          "docs": "Returns the collection of rfq events visible to the authenticated provider."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

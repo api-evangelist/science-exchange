@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Science Exchange Providers addresses experiment_types API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_token",
+      "value": "{{access_token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "experiment_types",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List experiment types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/experiment_types"
+          },
+          "docs": "Returns the collection of experiment types visible to the authenticated provider."
+        },
+        {
+          "info": {
+            "name": "Get a experiment type",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/experiment_types/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The experiment type identifier."
+              }
+            ]
+          },
+          "docs": "Returns a single experiment type by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

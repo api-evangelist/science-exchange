@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Science Exchange Providers addresses facilities API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_token",
+      "value": "{{access_token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "facilities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List facilities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/facilities"
+          },
+          "docs": "Returns the collection of facilities visible to the authenticated provider."
+        },
+        {
+          "info": {
+            "name": "Get a facility",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/facilities/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The facility identifier."
+              }
+            ]
+          },
+          "docs": "Returns a single facility by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

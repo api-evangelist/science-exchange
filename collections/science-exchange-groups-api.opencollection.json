@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Science Exchange Providers addresses groups API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_token",
+      "value": "{{access_token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "groups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/groups"
+          },
+          "docs": "Returns the collection of groups visible to the authenticated provider."
+        },
+        {
+          "info": {
+            "name": "Get a group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/groups/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The group identifier."
+              }
+            ]
+          },
+          "docs": "Returns a single group by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

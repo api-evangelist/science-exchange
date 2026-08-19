@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Science Exchange Providers addresses tags API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_token",
+      "value": "{{access_token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "tags",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/tags"
+          },
+          "docs": "Returns the collection of tags visible to the authenticated provider."
+        },
+        {
+          "info": {
+            "name": "Get a tag",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/tags/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The tag identifier."
+              }
+            ]
+          },
+          "docs": "Returns a single tag by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Science Exchange Providers addresses attachments API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_token",
+      "value": "{{access_token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "attachments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List attachments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/attachments"
+          },
+          "docs": "Returns the collection of attachments visible to the authenticated provider."
+        },
+        {
+          "info": {
+            "name": "Get a attachment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/attachments/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The attachment identifier."
+              }
+            ]
+          },
+          "docs": "Returns a single attachment by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

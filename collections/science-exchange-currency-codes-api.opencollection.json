@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Science Exchange Providers addresses currency_codes API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_token",
+      "value": "{{access_token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "currency_codes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List currency codes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/currency_codes"
+          },
+          "docs": "Returns the collection of currency codes visible to the authenticated provider."
+        },
+        {
+          "info": {
+            "name": "Get a currency code",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/currency_codes/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The currency code identifier."
+              }
+            ]
+          },
+          "docs": "Returns a single currency code by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

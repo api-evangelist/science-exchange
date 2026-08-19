@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Science Exchange Providers addresses experiment_type_fields API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_token",
+      "value": "{{access_token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "experiment_type_fields",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List experiment type fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/experiment_type_fields"
+          },
+          "docs": "Returns the collection of experiment type fields visible to the authenticated provider."
+        },
+        {
+          "info": {
+            "name": "Get a experiment type field",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/experiment_type_fields/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The experiment type field identifier."
+              }
+            ]
+          },
+          "docs": "Returns a single experiment type field by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

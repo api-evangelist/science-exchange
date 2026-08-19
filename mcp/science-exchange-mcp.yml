@@ -142,3 +142,9 @@ tools:
 - name: get_user
   description: Get a single user by id.
   source_operation: openapi/science-exchange-providers-openapi.yml#getProvidersV1UsersId
+deployment:
+  mode: none
+  verified: derived
+  tools: 45
+  checked: '2026-08-12'
+  source: catalog MCP census

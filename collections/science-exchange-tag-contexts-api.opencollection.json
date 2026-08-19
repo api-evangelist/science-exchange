@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Science Exchange Providers addresses tag_contexts API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_token",
+      "value": "{{access_token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "tag_contexts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tag contexts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/tag_contexts"
+          },
+          "docs": "Returns the collection of tag contexts visible to the authenticated provider."
+        },
+        {
+          "info": {
+            "name": "Get a tag context",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/tag_contexts/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The tag context identifier."
+              }
+            ]
+          },
+          "docs": "Returns a single tag context by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

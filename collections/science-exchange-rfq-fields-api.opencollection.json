@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Science Exchange Providers addresses rfq_fields API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_token",
+      "value": "{{access_token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "rfq_fields",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List rfq fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/rfq_fields"
+          },
+          "docs": "Returns the collection of rfq fields visible to the authenticated provider."
+        },
+        {
+          "info": {
+            "name": "Get a RFQ field",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/rfq_fields/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The RFQ field identifier."
+              }
+            ]
+          },
+          "docs": "Returns a single RFQ field by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

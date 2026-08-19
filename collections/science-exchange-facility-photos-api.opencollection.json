@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Science Exchange Providers addresses facility_photos API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_token",
+      "value": "{{access_token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "facility_photos",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List facility photos",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/facility_photos"
+          },
+          "docs": "Returns the collection of facility photos visible to the authenticated provider."
+        },
+        {
+          "info": {
+            "name": "Get a facility photo",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/facility_photos/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The facility photo identifier."
+              }
+            ]
+          },
+          "docs": "Returns a single facility photo by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

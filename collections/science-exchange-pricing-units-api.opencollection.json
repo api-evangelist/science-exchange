@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Science Exchange Providers addresses pricing_units API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_token",
+      "value": "{{access_token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "pricing_units",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List pricing units",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/pricing_units"
+          },
+          "docs": "Returns the collection of pricing units visible to the authenticated provider."
+        },
+        {
+          "info": {
+            "name": "Get a pricing unit",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.scienceexchange.com/api/providers/v1/pricing_units/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The pricing unit identifier."
+              }
+            ]
+          },
+          "docs": "Returns a single pricing unit by its identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
