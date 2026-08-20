@@ -49,6 +49,16 @@ tags:
 - Supplier Management
 - Biotech
 - Pharmaceuticals
+tags_raw:
+- Company
+- Life Sciences
+- Research and Development
+- Scientific Services
+- Procurement
+- Marketplace
+- Supplier Management
+- Biotech
+- Pharmaceuticals
 - API
 maintainers:
 - FN: Kin Lane
@@ -62,6 +72,8 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
+  - Addresses
+  tags_raw:
   - addresses
   properties:
   - type: OpenAPI
@@ -80,6 +92,8 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
+  - Attachments
+  tags_raw:
   - attachments
   properties:
   - type: OpenAPI
@@ -98,6 +112,8 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
+  - Currency Codes
+  tags_raw:
   - currency_codes
   properties:
   - type: OpenAPI
@@ -115,7 +131,8 @@ apis:
   description: ExperimentTypeFields resource.
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
-  tags:
+  tags: []
+  tags_raw:
   - experiment_type_fields
   properties:
   - type: OpenAPI
@@ -133,7 +150,8 @@ apis:
   description: ExperimentTypes resource.
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
-  tags:
+  tags: []
+  tags_raw:
   - experiment_types
   properties:
   - type: OpenAPI
@@ -152,6 +170,8 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
+  - Facilities
+  tags_raw:
   - facilities
   properties:
   - type: OpenAPI
@@ -169,7 +189,8 @@ apis:
   description: FacilityMembers resource.
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
-  tags:
+  tags: []
+  tags_raw:
   - facility_members
   properties:
   - type: OpenAPI
@@ -187,7 +208,8 @@ apis:
   description: FacilityPhotos resource.
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
-  tags:
+  tags: []
+  tags_raw:
   - facility_photos
   properties:
   - type: OpenAPI
@@ -206,6 +228,8 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
+  - Group
+  tags_raw:
   - groups
   properties:
   - type: OpenAPI
@@ -224,6 +248,8 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
+  - Line Items
+  tags_raw:
   - line_items
   properties:
   - type: OpenAPI
@@ -241,7 +267,8 @@ apis:
   description: PricingUnits resource.
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
-  tags:
+  tags: []
+  tags_raw:
   - pricing_units
   properties:
   - type: OpenAPI
@@ -259,7 +286,8 @@ apis:
   description: QuoteVersions resource.
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
-  tags:
+  tags: []
+  tags_raw:
   - quote_versions
   properties:
   - type: OpenAPI
@@ -278,6 +306,8 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
+  - Quotes
+  tags_raw:
   - quotes
   properties:
   - type: OpenAPI
@@ -296,6 +326,8 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
+  - Ratings
+  tags_raw:
   - ratings
   properties:
   - type: OpenAPI
@@ -313,7 +345,8 @@ apis:
   description: RFQCollaborators resource.
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
-  tags:
+  tags: []
+  tags_raw:
   - rfq_collaborators
   properties:
   - type: OpenAPI
@@ -331,7 +364,8 @@ apis:
   description: RFQEvents resource.
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
-  tags:
+  tags: []
+  tags_raw:
   - rfq_events
   properties:
   - type: OpenAPI
@@ -349,7 +383,8 @@ apis:
   description: RFQFields resource.
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
-  tags:
+  tags: []
+  tags_raw:
   - rfq_fields
   properties:
   - type: OpenAPI
@@ -367,7 +402,8 @@ apis:
   description: RFQMessages resource.
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
-  tags:
+  tags: []
+  tags_raw:
   - rfq_messages
   properties:
   - type: OpenAPI
@@ -386,6 +422,8 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
+  - RFQs
+  tags_raw:
   - rfqs
   properties:
   - type: OpenAPI
@@ -404,6 +442,8 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
+  - Services
+  tags_raw:
   - services
   properties:
   - type: OpenAPI
@@ -421,7 +461,8 @@ apis:
   description: TagContexts resource.
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
-  tags:
+  tags: []
+  tags_raw:
   - tag_contexts
   properties:
   - type: OpenAPI
@@ -440,6 +481,8 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
+  - Tags
+  tags_raw:
   - tags
   properties:
   - type: OpenAPI
@@ -458,6 +501,8 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
+  - User
+  tags_raw:
   - users
   properties:
   - type: OpenAPI
