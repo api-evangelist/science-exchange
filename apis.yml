@@ -123,8 +123,7 @@ apis:
   description: CurrencyCodes resource.
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
-  tags:
-  - Currency Codes
+  tags: []
   tags_raw:
   - currency_codes
   properties:
@@ -259,8 +258,7 @@ apis:
   description: LineItems resource.
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
-  tags:
-  - Line Items
+  tags: []
   tags_raw:
   - line_items
   properties:
@@ -338,7 +336,7 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
-  - Ratings
+  - ratings
   tags_raw:
   - ratings
   properties:
@@ -434,7 +432,7 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
-  - RFQs
+  - rfqs
   tags_raw:
   - rfqs
   properties:
