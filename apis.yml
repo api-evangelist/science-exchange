@@ -429,26 +429,6 @@ apis:
     url: errors/science-exchange-problem-types.yml
   - type: DataModel
     url: data-model/science-exchange-data-model.yml
-- aid: science-exchange:science-exchange-rfqs-api
-  name: Science Exchange rfqs API
-  description: RFQs resource.
-  humanURL: https://demo.scienceexchange.com/api-docs/providers
-  baseURL: https://www.scienceexchange.com/api/providers/v1
-  tags:
-  - RFQs
-  tags_raw:
-  - rfqs
-  properties:
-  - type: OpenAPI
-    url: openapi/science-exchange-rfqs-api-openapi.yml
-  - type: Authentication
-    url: authentication/science-exchange-authentication.yml
-  - type: Conventions
-    url: conventions/science-exchange-conventions.yml
-  - type: ErrorCatalog
-    url: errors/science-exchange-problem-types.yml
-  - type: DataModel
-    url: data-model/science-exchange-data-model.yml
 - aid: science-exchange:science-exchange-services-api
   name: Science Exchange services API
   description: Services resource.
@@ -520,6 +500,24 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/science-exchange-users-api-openapi.yml
+  - type: Authentication
+    url: authentication/science-exchange-authentication.yml
+  - type: Conventions
+    url: conventions/science-exchange-conventions.yml
+  - type: ErrorCatalog
+    url: errors/science-exchange-problem-types.yml
+  - type: DataModel
+    url: data-model/science-exchange-data-model.yml
+- aid: science-exchange:science-exchange-rfqs-api
+  name: Science Exchange Rfqs API
+  description: RFQs resource.
+  humanURL: https://demo.scienceexchange.com/api-docs/providers
+  baseURL: https://www.scienceexchange.com/api/providers/v1
+  tags:
+  - rfqs
+  properties:
+  - type: OpenAPI
+    url: openapi/science-exchange-rfqs-api-openapi.yml
   - type: Authentication
     url: authentication/science-exchange-authentication.yml
   - type: Conventions
