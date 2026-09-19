@@ -514,6 +514,8 @@ apis:
   humanURL: https://demo.scienceexchange.com/api-docs/providers
   baseURL: https://www.scienceexchange.com/api/providers/v1
   tags:
+  - RFQs
+  tags_raw:
   - rfqs
   properties:
   - type: OpenAPI
