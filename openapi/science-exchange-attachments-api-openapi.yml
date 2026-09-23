@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Science Exchange Providers addresses Attachments API
+  title: Science Exchange Providers Attachments API
   version: v1
   description: Read API for scientific-service providers (suppliers) on the Science Exchange R&D marketplace. Exposes a provider's RFQs, quotes, services, facilities, line items, ratings, tags, users and related resources. Derived from the first-party se_providers_api_client Ruby wrapper (github.com/scienceexchange/se_providers_api_client); authoritative reference at https://demo.scienceexchange.com/api-docs/providers.
   contact:
@@ -16,7 +16,7 @@ servers:
 security:
 - access_token: []
 tags:
-- name: attachments
+- name: Attachments
   description: Attachments resource.
 paths:
   /attachments:
@@ -25,7 +25,7 @@ paths:
       summary: List attachments
       description: Returns the collection of attachments visible to the authenticated provider.
       tags:
-      - attachments
+      - Attachments
       responses:
         '200':
           description: A list of attachments.
@@ -45,7 +45,7 @@ paths:
       summary: Get a attachment
       description: Returns a single attachment by its identifier.
       tags:
-      - attachments
+      - Attachments
       parameters:
       - name: id
         in: path

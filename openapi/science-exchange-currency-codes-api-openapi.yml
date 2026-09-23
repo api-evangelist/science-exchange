@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Science Exchange Providers addresses Currency Codes API
+  title: Science Exchange Providers Currency Codes API
   version: v1
   description: Read API for scientific-service providers (suppliers) on the Science Exchange R&D marketplace. Exposes a provider's RFQs, quotes, services, facilities, line items, ratings, tags, users and related resources. Derived from the first-party se_providers_api_client Ruby wrapper (github.com/scienceexchange/se_providers_api_client); authoritative reference at https://demo.scienceexchange.com/api-docs/providers.
   contact:
@@ -16,7 +16,7 @@ servers:
 security:
 - access_token: []
 tags:
-- name: currency_codes
+- name: Currency Codes
   description: CurrencyCodes resource.
 paths:
   /currency_codes:
@@ -25,7 +25,7 @@ paths:
       summary: List currency codes
       description: Returns the collection of currency codes visible to the authenticated provider.
       tags:
-      - currency_codes
+      - Currency Codes
       responses:
         '200':
           description: A list of currency codes.
@@ -45,7 +45,7 @@ paths:
       summary: Get a currency code
       description: Returns a single currency code by its identifier.
       tags:
-      - currency_codes
+      - Currency Codes
       parameters:
       - name: id
         in: path

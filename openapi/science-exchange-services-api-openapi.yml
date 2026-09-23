@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Science Exchange Providers addresses Services API
+  title: Science Exchange Providers Services API
   version: v1
   description: Read API for scientific-service providers (suppliers) on the Science Exchange R&D marketplace. Exposes a provider's RFQs, quotes, services, facilities, line items, ratings, tags, users and related resources. Derived from the first-party se_providers_api_client Ruby wrapper (github.com/scienceexchange/se_providers_api_client); authoritative reference at https://demo.scienceexchange.com/api-docs/providers.
   contact:
@@ -16,7 +16,7 @@ servers:
 security:
 - access_token: []
 tags:
-- name: services
+- name: Services
   description: Services resource.
 paths:
   /services:
@@ -25,7 +25,7 @@ paths:
       summary: List services
       description: Returns the collection of services visible to the authenticated provider.
       tags:
-      - services
+      - Services
       responses:
         '200':
           description: A list of services.
@@ -45,7 +45,7 @@ paths:
       summary: Get a service
       description: Returns a single service by its identifier.
       tags:
-      - services
+      - Services
       parameters:
       - name: id
         in: path
