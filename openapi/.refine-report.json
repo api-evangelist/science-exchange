@@ -28,16 +28,13 @@
     "science-exchange-tags-api-openapi.yml",
     "science-exchange-users-api-openapi.yml"
   ],
-  "archived": [
-    "deleted 1 superseded output(s) from the previous generation"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "science-exchange-providers-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
-    "superseded outputs removed: science-exchange-rf-qs-api-openapi.yml",
-    "apis.yml register: written (+1 apis, 23 total)"
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "science-exchange-addresses-api-openapi.yml: previously refined output, superseded by openapi/_original/",
@@ -54,11 +51,11 @@
     "science-exchange-quote-versions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "science-exchange-quotes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "science-exchange-ratings-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "science-exchange-rf-qs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "science-exchange-rfq-collaborators-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "science-exchange-rfq-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "science-exchange-rfq-fields-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "science-exchange-rfq-messages-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "science-exchange-rfqs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "science-exchange-services-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "science-exchange-tag-contexts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "science-exchange-tags-api-openapi.yml: previously refined output, superseded by openapi/_original/",
